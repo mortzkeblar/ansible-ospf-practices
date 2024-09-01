@@ -315,7 +315,7 @@ routing ospf interface-template add networks=10.255.255.2/32 area=backbone
 
 
 ### Phase 1 & 2 and execution
-Para ejecutar el playbook, se debe dividir en fases. En base al alcanze que se tiene en la red a un determinado dispositivo, por ejemplo no podemos llegar a `SA-1` si no tenemos configurados los routers en el medio que permiten conectarnos con ese switch. Se debe usar esa dinamica para cada salto que se deba hacer, en este caso lo dividimos en 2 fases: los que estan conectados directamente al router mikrotik (y RC-1) y luego los que estan conectados a los routers de la fase 1.  
+Para ejecutar el playbook, se debe dividir en fases. En base al alcance que se tiene en la red a un determinado dispositivo, por ejemplo no podemos llegar a `SA-1` si no tenemos configurados los routers en el medio que permiten conectarnos con ese switch. Se debe usar esa dinamica para cada salto que se deba hacer, en este caso lo dividimos en 2 fases: los que estan conectados directamente al router mikrotik (y RC-1) y luego los que estan conectados a los routers de la fase 1.  
 
 ```
 ansible-playbook -i hosts.yml config.yaml
