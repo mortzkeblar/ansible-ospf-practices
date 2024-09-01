@@ -1,6 +1,6 @@
 
 
-![[.imgs/1.png]]
+![](.imgs/1.png)
 
 Configuraciones iniciales para el Mikrotik que actua como gateway hacia internet . 
 
@@ -285,7 +285,7 @@ copy running-config star
 
 
 ### OSPF 
-![[.imgs/2.png]]
+![](.imgs/2.png)
 
 Como podemos ver en la imagen, no tenemos una ruta directa entre RC-1 y Mikrotik, vamos a configurar OSPF en el Mikrotik (Area 0) para que poder tomar las rutas que OSPF ya esta expandiendo en los routers adyacentes. 
 
