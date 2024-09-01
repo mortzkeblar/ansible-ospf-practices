@@ -1,0 +1,89 @@
+# settings for routers - phase 1 
+
+RA-1:
+  router_id: '1.1.1.1'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "Mikrotik", ip: "10.103.162.106", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RC-1", ip: "10.9.199.1", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RB-1", ip: "10.91.250.166", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RA-1-SWC-1", ip: "10.104.10.1", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/4", desc: "to RA-3", ip: "10.20.10.1", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/5", desc: "to RF-1", ip: "10.20.20.5", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+RB-1:
+  router_id: '2.2.2.2'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "Mikrotik", ip: "10.75.246.122", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RC-1", ip: "10.105.29.89", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RD-1", ip: "10.220.74.245", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RA-1", ip: "10.91.250.165", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+RD-1:
+  router_id: '3.3.3.3'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "Mikrotik", ip: "10.204.40.2", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RB-1", ip: "10.220.74.246", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RC-1", ip: "10.65.192.49", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RD-2", ip: "10.238.58.125", mask: "255.255.255.252", area: 2, passive: false, enabled: true}
+
+RC-1:
+  router_id: '4.4.4.4'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RA-1", ip: "10.9.199.2", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RB-1", ip: "10.105.29.90", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RD-1", ip: "10.65.192.50", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RC-2", ip: "10.252.147.205", mask: "255.255.255.252", area: 3, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/4", desc: "to SA-1", ip: "10.170.131.193", mask: "255.255.255.252", area: 3, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/5", desc: "to RF-1", ip: "10.20.20.1", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+# settings for routers - phase 2 
+
+
+RC-2:
+  router_id: '5.5.5.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RC-1", ip: "10.252.147.206", mask: "255.255.255.252", area: 3, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RC-3", ip: "10.20.20.21", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RC-4", ip: "10.21.10.1", mask: "255.255.255.252", area: 3, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to Docker67", ip: "192.168.151.1", mask: "255.255.255.252", area: 0, passive: true, enabled: true}
+    - { interface: "GigabitEthernet0/4", desc: "to RF-1", ip: "10.20.20.17", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+RF-1:
+  router_id: '5.1.1.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RC-1", ip: "10.20.20.2", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RA-1", ip: "10.20.20.6", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to RA-3", ip: "10.20.10.9", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RC-3", ip: "10.20.20.13", mask: "255.255.255.252", area: 0, passive: true, enabled: true}
+    - { interface: "GigabitEthernet0/4", desc: "to RC-4", ip: "10.20.20.18", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+SA-1:
+  router_id: '1.1.1.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RC-1", ip: "10.170.131.194", mask: "255.255.255.252", area: 3, passive: false, enabled: true, mode: "layer3"}
+    - { interface: "GigabitEthernet0/1", desc: "to RC-5", ip: "10.20.22.1", mask: "255.255.255.252", area: 3, passive: false, enabled: true, mode: "layer3"}
+
+RD-2:
+  router_id: '1.1.4.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RD-1", ip: "10.238.58.126", mask: "255.255.255.252", area: 2, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to Switch", ip: "10.20.30.1", mask: "255.255.255.252", area: 2, passive: false, enabled: true}
+
+RA-1-SWC-1:
+  router_id: '1.1.7.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RA-1", ip: "10.104.10.2", mask: "255.255.255.252", area: 0, passive: false, enabled: true, mode: "layer3"}
+
+RA-3:
+  router_id: '1.1.4.5'
+  interfaces:
+    - { interface: "GigabitEthernet0/0", desc: "to RC-3", ip: "10.20.20.17", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/1", desc: "to RA-1", ip: "10.20.10.2", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/2", desc: "to DockerP", ip: "10.255.255.1", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+    - { interface: "GigabitEthernet0/3", desc: "to RF-1", ip: "10.20.20.10", mask: "255.255.255.252", area: 0, passive: false, enabled: true}
+
+
+# set variables for the current host 
+interfaces: "{{ vars[inventory_hostname].interfaces }}"
+router_id: "{{ vars[inventory_hostname].router_id }}"
+
